@@ -1,0 +1,32 @@
+/**
+ * This program converts inches to centimeters and vice-versa. It takes two arguments as input
+ * a: a String representing the intent of the program ("InchToCm", "CmToInch")
+ * b: a double number representing the value to be converted
+ * 
+ * Hint: 1 inch = 2.54 centimeters
+ */
+
+public class NumericConversion {
+	
+	public static void main(String[] args) {
+		// get the type of conversion
+		String type = args[0];
+		
+		// we convert the second String argument to a Double using the
+		// parseDouble(String) method in the Double class
+		Double value = Double.parseDouble(args[1]);
+		
+		// we initialize a Double to hold the converted answer
+		Double answer = 0.0d;
+		
+		// implement the logic based on the type of conversion
+		if(type.equals("InchToCm")) {
+			// can you write the logic here?
+		}
+		else {
+			// can you write the logic here?
+		}
+		System.out.println("Converted value: "+answer);
+	}
+
+}
