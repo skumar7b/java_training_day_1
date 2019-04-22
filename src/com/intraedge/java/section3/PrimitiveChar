@@ -1,0 +1,15 @@
+/**
+ * A character variable occupies 16 bits of memory. 
+ * a. change 'A' to 'Z', compile and run.
+ * b. change 'A' to 'AA', compile and run.
+ * c. change 'A' to ' ', compile and run.
+ * d. change 'A' to '', compile and run.
+ * e. change 'A' to "A", compile and run.
+ */
+
+public class PrimitiveChar {
+	public static void main ( String[] args ) {
+	    char ch = 'A' ;
+	    System.out.println("A char: " +  ch );
+	}
+}
