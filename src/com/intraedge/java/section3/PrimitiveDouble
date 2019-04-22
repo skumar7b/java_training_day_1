@@ -1,0 +1,12 @@
+/**
+ * Compile and run this program. Check what gets printed on the screen. 
+ * Change '32' to a value that's too big for a double. What gets printed
+ * on the screen?
+ */
+
+public class PrimitiveDouble {
+	public static void main ( String[] args ) {
+		double value = 32;
+	    System.out.println("A double: " +  value);
+	}
+}
