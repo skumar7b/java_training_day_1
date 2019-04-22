@@ -1,0 +1,15 @@
+/**
+ * Compile and run this program. Check what gets printed on the screen. Edit the 
+ * program so that the '32' is changed to some other small number, say 256. How
+ * does the output look? Now, change the value to a really big number, say 36000.
+ * How does the output look? Now change the data type from short to int and run
+ * the program again with the high value (36000). What happens?
+ */
+
+public class PrimitiveShort {
+	public static void main ( String[] args )
+	  {
+	    short value = 32;
+	    System.out.println("A short: " +  value);
+	  }
+}
