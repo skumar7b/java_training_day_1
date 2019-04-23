@@ -1,0 +1,47 @@
+/**
+ * Different variable types in Java
+ */
+
+public class VariableTypes {
+	
+	/*
+	 * This is an instance variable as it is outside any method without using
+	 * the 'static' modifier. It is using the default access modifier.
+	 */
+	int instanceField;
+	
+	/*
+	 * This is a static variable as it is outside any method and uses the 
+	 * 'static' modifier with it. It is using the default access scope.
+	 */
+	static String staticField;
+	
+	public void method() {
+		/*
+		 * This is a local variable as it is defined inside a method of the
+		 * class. The only modifier that can be applied to a local variable is 'final'.
+		 *
+		 * Note* : Local variables need to be initialized before they can be used.
+		 */
+		final String localVariable = "Initial Value";
+		System.out.println(localVariable);
+	}
+	
+	public static void main(String args[]) {
+		VariableTypes obj = new VariableTypes();
+		
+		/*
+		 * Instance variables can only be accessed by objects of the class.
+		 */
+		System.out.println(obj.instanceField);
+		
+		/*
+		 * Static variables can be accessed in two ways.
+		 * 1- via objects of the class
+		 * 2- using the class name
+		 */
+		System.out.println(obj.staticField);
+		System.out.println(VariableTypes.staticField);
+    }
+
+}
