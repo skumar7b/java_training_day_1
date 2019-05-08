@@ -1,0 +1,36 @@
+/**
+ * What do you think the output of this program will be?
+ * Remember that Java is pass by value. What does that mean?
+ * Example 1: Caller: someObject.doSomeMethod(int a);
+ * The caller passes a copy of the primitive 'a' as an argument to another method. This means that the called method gets its 
+ * own copy of 'a'. If that method changes the value of 'a', the caller DOES NOT see that change.
+ * Example 2: Caller: someObject.doSomething(Employee emp);
+ * The caller passes a copy of the reference to an object in the JVM. This means that the called method gets its own copy of
+ * the reference to the SAME object. So when this reference is used to update an object, will it modify the original object?
+ */
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ObjectReference {
+	
+	List<String> list1 = new ArrayList<String>();
+    List<String> list2 = new ArrayList<String>();
+    
+    public List<String> method(List<String> list){
+        list.add("a");
+        list.add("b");
+        return list;
+    }
+    public static void main(String[] args){
+    	ObjectReference o1 = new ObjectReference();
+    	ObjectReference o2 = o1;
+        o2.list1.add("c");
+        o2.list1 = o2.list2;
+        o2.list1.add("d");
+        List<String> list3 = o2.method(o2.list1);
+        list3.add("e");
+        System.out.println(o2.list2);
+    }
+
+}
